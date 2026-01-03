@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ALP Mango Premium Exports</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- PRELOADER --- */
+        #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 9999; display: flex; justify-content: center; align-items: center; transition: opacity 0.6s ease; }
+        .wave-container { display: flex; gap: 6px; height: 40px; align-items: center; }
+        .bar { width: 8px; height: 15px; background: #d1d5db; border-radius: 10px; animation: wave 1.2s infinite ease-in-out; }
+        .bar:nth-child(2) { animation-delay: 0.1s; } .bar:nth-child(3) { animation-delay: 0.2s; }
+        .bar:nth-child(4) { animation-delay: 0.3s; } .bar:nth-child(5) { animation-delay: 0.4s; }
+        @keyframes wave { 0%, 40%, 100% { height: 15px; } 20% { height: 40px; background: #15803d; } }
+
+        /* --- SLIDER ANIMATION --- */
+        .slider-container {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider-track {
+            display: flex;
+            width: max-content; /* Ensures track is as wide as the cards */
+            animation: scroll 35s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Moves half the total width (one full set) */
+        }
+        .slider-container:hover .slider-track {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-900 overflow-x-hidden">
+
+    <div id="preloader"><div class="wave-container"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div>
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md py-4 px-6 flex justify-between items-center">
+        <div class="text-2xl font-bold text-green-700 tracking-tight">ALP <span class="text-orange-500">MANGO</span></div>
+        <div id="nav-links" class="hidden md:flex space-x-8 font-medium">
+            <a href="index.html" class="hover:text-green-700 transition">Home</a>
+            <a href="AlpMango_best_exporterabout.html" class="hover:text-green-700 transition">About Us</a>
+            <a href="Alpmango_get_quote_export_banana_pomogranate_onion_mangoes_product.html" class="hover:text-green-700 transition">Products</a>
+            <a href="Alpmango_best_exporter_pomegranates_bananas_onion_contactus.html" class="hover:text-green-700 transition">Contact</a>
+        </div>
+        <a href="Alpmango_get_quote_export_banana_pomogranate_onion_mangoes_request_quote.html" class="bg-green-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-800 transition">Get Quote</a>
+    </nav>
+
+    <header class="bg-gray-900 py-24 text-white text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <span class="uppercase tracking-widest text-sm font-semibold text-orange-400">Our Story</span>
+            <h1 class="text-5xl font-bold mt-4 mb-6">India's Trusted Export Partner</h1>
+            <p class="text-xl text-gray-400">Direct from our farms to your port. Verified quality, transparent logistics.</p>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center min-h-[600px]">
+    
+    <div class="flex flex-col justify-center h-full">
+        
+        <div id="text-infra" class="fade-in-content">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">World-Class Infrastructure</h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+                At ALP Mango, we don't just trade; we control the quality. Our integrated supply chain includes dedicated cold storage facilities and automated sorting lines to ensure every consignment meets global export standards.
+            </p>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+                Our facility is designed for high-volume handling, featuring temperature-controlled zones that extend shelf life for long-haul sea shipments .
+            </p>
+        </div>
+
+        <div id="text-founder" class="hidden fade-in-content">
+            <div class="mb-6">
+                <i class="fas fa-quote-left text-4xl text-green-600 opacity-30"></i>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-serif italic">
+                "Our vision is simple: To build long-term trust through unfiltered and uncompromised service excellence ."
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+                We founded ALP Mango to bridge the gap between Indian farmers and global tables. When you buy from us, you aren't just buying fruit; you are buying reliability, transparency, and the true taste of India.
+            </p>
+            <div class="mb-8">
+                <h3 class="text-lg font-bold text-green-700">LALIT AGARWAL</h3>
+                <p class="text-sm text-gray-500 uppercase tracking-wider">Founder & CEO</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mt-auto">
+            <button onclick="switchTab('infra')" id="btn-infra" class="text-left p-4 rounded-2xl border-2 border-green-600 bg-green-50 shadow-md transition-all duration-300">
+                <div class="flex justify-between items-center mb-1">
+                    <h4 class="font-bold text-green-800">Our Process</h4>
+                    <i class="fas fa-cogs text-green-600"></i>
+                </div>
+                <p class="text-xs text-green-700">Farm-to-Port Ops</p>
+            </button>
+
+            <button onclick="switchTab('founder')" id="btn-founder" class="text-left p-4 rounded-2xl border-2 border-transparent bg-white shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="flex justify-between items-center mb-1">
+                    <h4 class="font-bold text-gray-800">Leadership</h4>
+                    <i class="fas fa-user-tie text-gray-400"></i>
+                </div>
+                <p class="text-xs text-gray-500">Founder's Message</p>
+            </button>
+        </div>
+
+    </div>
+
+    <div class="relative h-[500px] w-full">
+        
+        <div id="img-infra" class="absolute inset-0 transition-opacity duration-500 opacity-100 z-10">
+            <div class="rounded-3xl overflow-hidden shadow-2xl h-full w-full">
+                <img src="imgs/WhatsApp Image 2025-12-30 at 9.52.54 AM.jpeg" class="w-full h-full object-cover" alt="Cold Storage">
+            </div>
+        </div>
+
+        <div id="img-founder" class="absolute inset-0 transition-opacity duration-500 opacity-0 z-0" >
+            <div class="rounded-3xl overflow-hidden shadow-2xl h-full w-full border-4 border-gray-100">
+                <img src="http://balajipc.com/new/wp-content/uploads/2025/10/Lalit-Agarwal.png" class="w-full h-full object-cover" alt="Founder">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Simple animation for text appearing */
+    .fade-in-content { animation: fadeIn 0.5s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+
+    <section class="bg-white py-24 border-t overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6 mb-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Complete Supply Chain Control</h2>
+            <p class="text-gray-600">From our farms to your port, we manage every step.</p>
+        </div>
+
+        <div class="absolute top-0 bottom-0 left-0 w-24 z-20 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
+        <div class="absolute top-0 bottom-0 right-0 w-24 z-20 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+
+        <div class="slider-container">
+            <div class="slider-track gap-8 px-4">
+                
+                <div class="w-80 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="imgs/WhatsApp Image 2025-12-30 at 9.30.34 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Farm">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1 text-gray-800">Partner Farms</h3>
+                        <p class="text-gray-500 text-sm">GAP-certified vineyards.</p>
+                    </div>
+                </div>
+
+                <div class="w-80 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="imgs/WhatsApp Image 2025-12-30 at 9.30.45 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Sorting">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1 text-gray-800">Sorting Lines</h3>
+                        <p class="text-gray-500 text-sm">Automated sizing & grading.</p>
+                    </div>
+                </div>
+
+                <div class="w-80 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="imgs/WhatsApp Image 2025-12-30 at 9.30.36 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Packing">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1 text-gray-800">In-House Testing</h3>
+                        <p class="text-gray-500 text-sm">Advanced In-House Safety Protocols .</p>
+                    </div>
+                </div>
+
+                <div class="w-80 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="imgs/WhatsApp Image 2025-12-30 at 9.52.54 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Cold Chain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1 text-gray-800">Cold Storage</h3>
+                        <p class="text-gray-500 text-sm">Temp-controlled warehouses.</p>
+                    </div>
+                </div>
+
+                <div class="w-80 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="imgs/WhatsApp Image 2025-12-30 at 9.30.14 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Fields">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1 text-gray-800">Direct Sourcing</h3>
+                        <p class="text-gray-500 text-sm">Contract farming partners.</p>
+                    </div>
+                </div>
+
+                <div class="w-80 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="imgs/WhatsApp Image 2025-12-30 at 9.52.51 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Dispatch">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1 text-gray-800">Hygenic Packing & Warehousing</h3>
+                        <p class="text-gray-500 text-sm">Sanitized, export-grade packaging & storage .</p>
+                    </div>
+                </div>
+
+                <div class="w-80 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white group">
+                    <div class="h-56 overflow-hidden"><img src="imgs/WhatsApp Image 2025-12-30 at 9.30.34 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"></div>
+                    <div class="p-6"><h3 class="font-bold text-lg mb-1 text-gray-800">Partner Farms</h3><p class="text-gray-500 text-sm">GAP-certified vineyards.</p></div>
+                </div>
+                <div class="w-80 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white group">
+                    <div class="h-56 overflow-hidden"><img src="imgs/WhatsApp Image 2025-12-30 at 9.30.45 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"></div>
+                    <div class="p-6"><h3 class="font-bold text-lg mb-1 text-gray-800">Sorting Lines</h3><p class="text-gray-500 text-sm">Precise sizing & grading.</p></div>
+                </div>
+                <!-- <div class="w-80 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white group">
+                    <div class="h-56 overflow-hidden"><img src="imgs/WhatsApp Image 2025-12-30 at 9.30.36 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"></div>
+                    <div class="p-6"><h3 class="font-bold text-lg mb-1 text-gray-800">Hygienic Packing</h3><p class="text-gray-500 text-sm">Advanced sealing machinery.</p></div>
+                </div> -->
+                <div class="w-80 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white group">
+                    <div class="h-56 overflow-hidden"><img src="imgs/WhatsApp Image 2025-12-30 at 9.52.54 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"></div>
+                    <div class="p-6"><h3 class="font-bold text-lg mb-1 text-gray-800">Cold Storage</h3><p class="text-gray-500 text-sm">Temp-controlled Warehouses.</p></div>
+                </div>
+                <div class="w-80 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white group">
+                    <div class="h-56 overflow-hidden"><img src="imgs/WhatsApp Image 2025-12-30 at 9.30.14 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"></div>
+                    <div class="p-6"><h3 class="font-bold text-lg mb-1 text-gray-800">Direct Sourcing</h3><p class="text-gray-500 text-sm">Contract farming partners.</p></div>
+                </div>
+                <div class="w-80 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white group">
+                    <div class="h-56 overflow-hidden"><img src="imgs/WhatsApp Image 2025-12-30 at 9.52.51 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"></div>
+                    <div class="p-6"><h3 class="font-bold text-lg mb-1 text-gray-800">Port Ready</h3><p class="text-gray-500 text-sm">Palletized for export.</p></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-20 px-6 text-center">
+        <div class="mb-8 text-3xl font-bold text-green-700">ALP <span class="text-orange-500">MANGO</span></div>
+        <p class="text-gray-400 mb-10 max-w-xl mx-auto text-lg">Partnering with farms across India to supply consistent, high-quality produce worldwide.</p>
+        <div class="border-t border-gray-800 pt-8">
+            <p class="text-gray-500 text-sm">© 2026 alpmango.com | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+<script>
+        // 1. PRELOADER LOGIC
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                setTimeout(() => {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => { preloader.style.display = 'none'; }, 600);
+                }, 500);
+            }
+        });
+
+        // 2. SMART NAVIGATION (Underline Logic)
+        window.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll('#nav-links a');
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                if (linkPath === currentPath || (currentPath === "" && linkPath === "index.html")) {
+                    link.classList.add('text-green-700', 'border-b-2', 'border-green-700');
+                    link.classList.remove('hover:text-green-700');
+                }
+            });
+        });
+
+        // 3. TAB SWITCHING LOGIC (For Founder/Process Section)
+        function switchTab(tabName) {
+            // Define Elements
+            const textInfra = document.getElementById('text-infra');
+            const textFounder = document.getElementById('text-founder');
+            const imgInfra = document.getElementById('img-infra');
+            const imgFounder = document.getElementById('img-founder');
+            const btnInfra = document.getElementById('btn-infra');
+            const btnFounder = document.getElementById('btn-founder');
+
+            if (tabName === 'founder') {
+                // Show Founder, Hide Infra
+                textInfra.classList.add('hidden');
+                textFounder.classList.remove('hidden');
+                
+                imgInfra.classList.remove('opacity-100', 'z-10');
+                imgInfra.classList.add('opacity-0', 'z-0');
+                imgFounder.classList.remove('opacity-0', 'z-0');
+                imgFounder.classList.add('opacity-100', 'z-10');
+
+                // Button Styles (Founder Active)
+                btnFounder.classList.add('border-green-600', 'bg-green-50');
+                btnFounder.querySelector('h4').classList.replace('text-gray-800', 'text-green-800');
+                
+                btnInfra.classList.remove('border-green-600', 'bg-green-50');
+                btnInfra.classList.add('border-transparent', 'bg-white');
+                btnInfra.querySelector('h4').classList.replace('text-green-800', 'text-gray-800');
+
+            } else {
+                // Show Infra, Hide Founder
+                textFounder.classList.add('hidden');
+                textInfra.classList.remove('hidden');
+
+                imgFounder.classList.remove('opacity-100', 'z-10');
+                imgFounder.classList.add('opacity-0', 'z-0');
+                imgInfra.classList.remove('opacity-0', 'z-0');
+                imgInfra.classList.add('opacity-100', 'z-10');
+
+                // Button Styles (Infra Active)
+                btnInfra.classList.add('border-green-600', 'bg-green-50');
+                btnInfra.querySelector('h4').classList.replace('text-gray-800', 'text-green-800');
+                
+                btnFounder.classList.remove('border-green-600', 'bg-green-50');
+                btnFounder.classList.add('border-transparent', 'bg-white');
+                btnFounder.querySelector('h4').classList.replace('text-green-800', 'text-gray-800');
+            }
+        }
+
+    </script>
+</body>
+</html>
+</body>
+</html>
