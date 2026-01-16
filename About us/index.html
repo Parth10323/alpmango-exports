@@ -43,7 +43,7 @@
 
     <div id="preloader"><div class="wave-container"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div>
 
-    <nav class="sticky top-0 z-50 bg-white shadow-md py-4 px-6 flex justify-between items-center">
+    <!-- <nav class="sticky top-0 z-50 bg-white shadow-md py-4 px-6 flex justify-between items-center">
         <div class="text-2xl font-bold text-green-700 tracking-tight">ALP <span class="text-orange-500">MANGO</span></div>
         <div id="nav-links" class="hidden md:flex space-x-8 font-medium">
             <a href="/" class="hover:text-green-700 transition">Home</a>
@@ -52,7 +52,9 @@
             <a href="/Contact-us/" class="hover:text-green-700 transition">Contact</a>
         </div>
         <a href="/Request_Quote/" class="bg-green-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-800 transition">Get Quote</a>
-    </nav>
+    </nav> -->
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md py-4 px-6 flex justify-between items-center"><div class="text-2xl font-bold text-green-700 tracking-tight">ALP<span class="text-orange-500"> MANGO</span></div><div id="nav-links" class="hidden md:flex space-x-8 font-medium"><a href="/" class="hover:text-green-700 transition">Home</a><a href="/About us/" class="hover:text-green-700 transition">About Us</a><a href="/Products/" class="hover:text-green-700 transition">Products</a><a href="/Contact-us/" class="hover:text-green-700 transition">Contact</a></div><div class="flex items-center gap-4"><a href="/Request_Quote/" class="bg-green-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-800 transition shadow-lg text-sm md:text-base whitespace-nowrap">Get Quote</a><button id="mobile-menu-btn" class="md:hidden text-green-700 focus:outline-none p-2"><i class="fas fa-bars text-2xl"></i></button></div></nav><div id="mobile-menu" class="hidden md:hidden fixed top-[72px] left-0 w-full bg-white shadow-lg border-t border-gray-100 z-40"><div class="flex flex-col p-6 space-y-4 font-medium text-gray-800"><a href="/" class="hover:text-green-700 transition block">Home</a><a href="/About us/" class="hover:text-green-700 transition block">About Us</a><a href="/Products/" class="hover:text-green-700 transition block">Products</a><a href="/Contact-us/" class="hover:text-green-700 transition block">Contact</a></div></div>
 
     <header class="bg-gray-900 py-24 text-white text-center">
         <div class="max-w-4xl mx-auto px-6">
@@ -317,6 +319,25 @@
                 btnFounder.querySelector('h4').classList.replace('text-green-800', 'text-gray-800');
             }
         }
+
+    // Mobile Menu Toggle
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        // Optional: Toggle icon between bars and times (X)
+        const icon = mobileBtn.querySelector('i');
+        if (mobileMenu.classList.contains('hidden')) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        } else {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        }
+    });
+}
 
     </script>
 </body>
